@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>第二个页面 |  wy的博客网站</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-第二个页面"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  第二个页面
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/05/26/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%A1%B5%E9%9D%A2/" class="article-date">
+  <time datetime="2023-05-26T13:44:33.000Z" itemprop="datePublished">2023-05-26</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<script type="module">
+</blockquote>
+<h3 id="导出方式"><a href="#导出方式" class="headerlink" title="导出方式"></a>导出方式</h3><blockquote>
+<p>export</p>
+<p>export{变量1，变量2}</p>
+<p>export default 默认导出</p>
+</blockquote>
+<h3 id="导入方式"><a href="#导入方式" class="headerlink" title="导入方式"></a>导入方式</h3><blockquote>
+<p>import {变量1 as 重命名，变量2} from 地址 对象解构去匹配导出的整个对象中的相同的变量名，没有匹配到为undefined，可以重命名</p>
+<p>import 变量 from 地址,默认导入，可以接收到默认导出</p>
+<p>import * as 变量名 from 地址,全部导入，可以接收到文件中的所有导出，包括默认导出。</p>
+</blockquote>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><blockquote>
+<p>存在于两个构造函数之间，子类从父类构造函数上面继承相同的方法和属性</p>
+</blockquote>
+<h3 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h3><blockquote>
+<p>​    Son.prototype &#x3D; new Person(‘刘海涛’, 25)</p>
+</blockquote>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<p>不管是在父类构造函数体类 还是原型对象上面 都可以继承过来 </p>
+</blockquote>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<p>需要在多个地方传递参数 </p>
+<p>如果在子类构造函数的原型对象上面添加方法和属性的时候  添加到父类实例化对象里面了</p>
+</blockquote>
+<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3><blockquote>
+<p>Person.call(this)</p>
+</blockquote>
+<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<p>只需要在一个地方进行传参  </p>
+</blockquote>
+<h4 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<p>只能继承父类构造函数体类的方法和属性 不能继承原型对象上面的方法和属性</p>
+</blockquote>
+<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><blockquote>
+<p>Son.prototype &#x3D; new Person(‘刘海涛’, 25)</p>
+<p>Person.call(this)</p>
+</blockquote>
+<h4 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<p>只需要在一个地方进行传参  </p>
+</blockquote>
+<h4 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<p>在子类的原型对象上面添加方法和属性  实际上添加到了父类的实例化对象上面</p>
+</blockquote>
+<h3 id="ES6继承"><a href="#ES6继承" class="headerlink" title="ES6继承"></a>ES6继承</h3><blockquote>
+<p>class Son extends Person{</p>
+<p>super()</p>
+<p>…….</p>
+<p>}</p>
+</blockquote>
+<h1 id="5月6日"><a href="#5月6日" class="headerlink" title="5月6日"></a>5月6日</h1><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><blockquote>
+<p>一个构造函数只生成一个实例化对象</p>
+</blockquote>
+<p>核心代码</p>
+<blockquote>
+<p>let instance&#x3D;null </p>
+<p>function Fn(){</p>
+<p>if(!instance){</p>
+<p>instance&#x3D;new   Person()</p>
+<p>}</p>
+<p>return instance</p>
+<p>}</p>
+</blockquote>
+<p>从单例模式实例化的对象使用地址是一致的，既可以全等</p>
+<h2 id="发布订阅者模式"><a href="#发布订阅者模式" class="headerlink" title="发布订阅者模式"></a>发布订阅者模式</h2><p>实例化对象方法中保存用户的操作记录，在获取到用户的操作时，找到对应的方法反馈，在存储操作记录的对象没有用户时，函数将不会执行。</p>
+<blockquote>
+<p>定义一个构造函数 class<br>              + 属性<br>                 + 存储订阅消息的对象<br>                 +  {<br>                    xiyou:[打电话,发微信，qq]<br>                    }<br>                              + 方法<br>                 +  on  订阅<br>                 +  off  取消订阅<br>                 +  emit  执行消息队列</p>
+</blockquote>
+<h2 id="单页面应用spa"><a href="#单页面应用spa" class="headerlink" title="单页面应用spa"></a>单页面应用spa</h2><blockquote>
+<p>SPA<br>         + single page application<br>                   + 一个项目里面只有一个index.html<br>                  + 一般应用在 移动端  或者pc后台管理系统  </p>
+<pre><code> +  前端开发  面向过程  面向对象  组件化开发
+ + 一个完整的组件 (html+css +js) 
+ + 切换组件的依赖  
+ + hash 根据hash值的变化 去切换不同的组件 (重点)
+ + history 根据变换切换不同的组件    
+</code></pre>
+</blockquote>
+<h3 id="具体实现-hash路由"><a href="#具体实现-hash路由" class="headerlink" title="具体实现    :hash路由"></a>具体实现    :hash路由</h3><blockquote>
+<a href="#/地址" >
+
+<p>改变地址栏中的hash值，再根据此hash值加载不同的组件</p>
+</blockquote>
+<h1 id="5月8日"><a href="#5月8日" class="headerlink" title="5月8日"></a>5月8日</h1><h2 id="认识node"><a href="#认识node" class="headerlink" title="认识node"></a>认识node</h2><blockquote>
+<p>基于 chrome V8引擎 运行时环境   </p>
+<ul>
+<li><p>运行js代码</p>
+</li>
+<li><p>ECMAscript</p>
+<ul>
+<li>使用</li>
+</ul>
+</li>
+<li><p>操作磁盘 </p>
+</li>
+<li><p>写后端 开启服务器 连接数据库</p>
+</li>
+</ul>
+</blockquote>
+<p>运行当前文件下的文件，需要打开命令执行窗口，node+文件名 执行文件</p>
+<h2 id="node模块化"><a href="#node模块化" class="headerlink" title="node模块化"></a>node模块化</h2><ul>
+<li><p>分类</p>
+<blockquote>
+<p>自定义模块</p>
+<p>内置模块</p>
+<p>第三方模块</p>
+</blockquote>
+</li>
+<li><p>模块化遵循common.js规范</p>
+</li>
+<li><p>导出使用module.exports&#x3D;()</p>
+</li>
+<li><p>导入使用require，类似exports</p>
+</li>
+</ul>
+<h3 id="内置模块：fs模块-提供读写功能"><a href="#内置模块：fs模块-提供读写功能" class="headerlink" title="内置模块：fs模块  (提供读写功能)"></a>内置模块：fs模块  (提供读写功能)</h3><ul>
+<li><p>const  fs &#x3D;require(‘fs’)   &#x2F;&#x2F;&#x2F;&#x2F;导入fs模块方法</p>
+</li>
+<li><p>同步写入</p>
+<blockquote>
+<p>fs.writeFileSync(‘文件路径’，’写入内容’)</p>
+</blockquote>
+</li>
+<li><p>异步写入</p>
+<blockquote>
+<p>fs.writeFile(‘文件路径’，’写入内容’，(err)&#x3D;&gt;{</p>
+<p>console.log(data)   &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;err在写入成功时使用</p>
+<p>})</p>
+</blockquote>
+</li>
+<li><p>同步读取</p>
+<blockquote>
+<p>fs.readFileSync(‘文件路径’，’utf-8’)</p>
+</blockquote>
+</li>
+<li><p>异步读取</p>
+<blockquote>
+<p>fs.readFile(‘文件路径’，’utf-8’，(err,data)&#x3D;&gt;{</p>
+<p>console.log(data)   &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;err在报错时使用</p>
+<p>})</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="内置模块：path模块-用来操作路径"><a href="#内置模块：path模块-用来操作路径" class="headerlink" title="内置模块：path模块  (用来操作路径)"></a>内置模块：path模块  (用来操作路径)</h3><ul>
+<li><p>const  path &#x3D;require(‘path’)   &#x2F;&#x2F;&#x2F;&#x2F;导入path模块方法</p>
+</li>
+<li><p>组装相对路径   join</p>
+<blockquote>
+<p>let  res &#x3D; path.join(‘..’,’a’,’b’,’c.html’)</p>
+</blockquote>
+</li>
+<li><p>组装绝对路径   resolve</p>
+</li>
+</ul>
+<blockquote>
+<p>let  res  &#x3D; path.resolve(‘a’,’b’,’c.html’)</p>
+</blockquote>
+<ul>
+<li>解析   parse</li>
+</ul>
+<blockquote>
+<p>let  res  &#x3D; path.parse(‘D:&#x2F;2302&#x2F;25_DAY&#x2F;03_代码&#x2F;06-path模块&#x2F;a&#x2F;b&#x2F;c.html’)</p>
+<p>解析结果：</p>
+<p>{</p>
+<p>root: ‘D:&#x2F;‘,  &#x2F;&#x2F; 根目录</p>
+<p>dir: ‘D:&#x2F;2302&#x2F;25_DAY&#x2F;03_代码&#x2F;06-path模块&#x2F;a&#x2F;b’, &#x2F;&#x2F; 详细的路径</p>
+<p>base: ‘c.html’, &#x2F;&#x2F;  完整的文件(文件名和文件类型 )</p>
+<p>ext: ‘.html’,  &#x2F;&#x2F; 文件类型</p>
+<p>name: ‘c’   &#x2F;&#x2F; 文件名</p>
+<p>}</p>
+</blockquote>
+<h3 id="内置模块：url-模块"><a href="#内置模块：url-模块" class="headerlink" title="内置模块：url 模块"></a>内置模块：url 模块</h3><ul>
+<li><p>const  url &#x3D;require(‘url’)   &#x2F;&#x2F;&#x2F;&#x2F;导入url模块方法</p>
+</li>
+<li><p>解析   parse</p>
+</li>
+</ul>
+<blockquote>
+<p>const  res &#x3D; url.parse(‘<a target="_blank" rel="noopener" href="https://www.baidu.com/login?pageSize=12&current=1#/a/b/c.html',true">https://www.baidu.com:443/login?pageSize=12&amp;current=1#/a/b/c.html&#39;,true</a>)</p>
+<p>&#x2F;&#x2F;  第二个参数代表是否深度解析，可以使用对象</p>
+<p>解析结果：</p>
+<p>Url {</p>
+<p>protocol: ‘https:’, &#x2F;&#x2F; 协议</p>
+<p>slashes: true,  &#x2F;&#x2F;    &lt;&#x3D;代表这个符号</p>
+<p>auth: null,</p>
+<p>host: ‘<a target="_blank" rel="noopener" href="http://www.baidu.com:443/">www.baidu.com:443</a>‘, &#x2F;&#x2F; 域名+ 端口号</p>
+<p>port: ‘443’,  &#x2F;&#x2F;  端口号</p>
+<p>hostname: ‘<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>‘, &#x2F;&#x2F; 域名</p>
+<p>hash: ‘#&#x2F;a&#x2F;b&#x2F;c.html’,  &#x2F;&#x2F; hash值</p>
+<p>search: ‘?pageSize&#x3D;12&amp;current&#x3D;1’,  &#x2F;&#x2F; 查询字符串</p>
+<p>query: ‘pageSize&#x3D;12&amp;current&#x3D;1’,  &#x2F;&#x2F; 请求的参数</p>
+<p>pathname: ‘&#x2F;login’,  &#x2F;&#x2F; 文件地址</p>
+<p>path: ‘&#x2F;login?pageSize&#x3D;12&amp;current&#x3D;1’,  &#x2F;&#x2F; 完整的地址</p>
+<p>href: ‘<a target="_blank" rel="noopener" href="https://www.baidu.com/login?pageSize=12&current=1#/a/b/c.html">https://www.baidu.com:443/login?pageSize=12&amp;current=1#/a/b/c.html</a>‘ &#x2F;&#x2F;</p>
+<p>}</p>
+</blockquote>
+<h3 id="内置模块：http模块"><a href="#内置模块：http模块" class="headerlink" title="内置模块：http模块"></a>内置模块：http模块</h3><ul>
+<li><p>const  http &#x3D;require(‘http’)   &#x2F;&#x2F;&#x2F;&#x2F;导入http模块方法</p>
+</li>
+<li><p>创建一个服务</p>
+<blockquote>
+<p>const  server &#x3D; http.createServer((req,res)&#x3D;&gt;{</p>
+<p>&#x2F;&#x2F; 只要你访问我们的服务 都会从这个回调函数里面经过</p>
+<p>&#x2F;&#x2F; req  request  请求的所有信息 </p>
+<p>&#x2F;&#x2F;  res  response  响应的所有的信息  </p>
+<p>&#x2F;&#x2F; res.end()  给前端返回东西  只能返回字符串  </p>
+<p>console.log(req.url)  </p>
+<p>if(req.url &#x3D;&#x3D; ‘&#x2F;login.html’){</p>
+<p>​    fs.readFile(‘.&#x2F;client&#x2F;html&#x2F;login.html’,’utf-8’,(err,data)&#x3D;&gt;{</p>
+<p>​      if(err)  return res.end(‘error’)</p>
+<p>​      &#x2F;&#x2F; 走到这里 表示读取成功了</p>
+<p>​      res.end(data)</p>
+<p>​    })</p>
+<p>}else if(req.url &#x3D;&#x3D; ‘&#x2F;login.css’){</p>
+<p>​    fs.readFile(‘.&#x2F;client&#x2F;css&#x2F;login.css’,’utf-8’,(err,data)&#x3D;&gt;{</p>
+<p>​      if(err)  return res.end(‘error’)</p>
+<p>​      &#x2F;&#x2F; 走到这里 表示读取成功了</p>
+<p>​      res.end(data)</p>
+<p>​    })</p>
+<p>}else{</p>
+<p>​    res.end(‘not found’)</p>
+<p>}</p>
+<p>&#x2F;&#x2F; res.end(‘hello node111111111111111111111111111’)</p>
+<p>})</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h2><blockquote>
+<p>npm init    初始化</p>
+<p>npm  i  包名@版本号  –save-dev(下载到开发环境，不添加默认下载到生产环境)</p>
+<p>npm uni  包名    卸载包</p>
+</blockquote>
+<h1 id="5月9日"><a href="#5月9日" class="headerlink" title="5月9日"></a>5月9日</h1><h2 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h2><blockquote>
+<p><strong>let  xhr &#x3D; new XMLHttpRequest()    &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;创建ajax实例化对象</strong></p>
+<p><strong>xhr.open(‘get’, ‘<a target="_blank" rel="noopener" href="http://localho/">http://localho</a>‘)</strong></p>
+<p>&#x2F;&#x2F; 配置请求信息</p>
+<p>​    &#x2F;*</p>
+<p>​      参数</p>
+<p>​      + 参数1表示请求方式（get或者post）</p>
+<p>​      + 参数2表示请求地址（你向谁发生请求）</p>
+<p>​      + 参数3表示异步（true，默认）或者同步（false，99.99999%不会用到）</p>
+<p>​    *&#x2F;</p>
+<p><strong>xhr.onreadystatechange &#x3D; ()&#x3D;&gt;{</strong></p>
+<p>​      &#x2F;&#x2F; xhr.readyState &#x3D; 2时-发送数据, send()方法调用, 但是当前的状态及http头未知,请求未完成</p>
+<p>​      &#x2F;&#x2F; xhr.readyState &#x3D; 3时-数据传输中, 接受部分数据</p>
+<p>​      &#x2F;&#x2F; xhr.readyState &#x3D; 4时-响应内容解析完成</p>
+<p>​      &#x2F;&#x2F; console.log(xhr.readyState)</p>
+<p>​      &#x2F;&#x2F; xhr.responseText 表示接收后端传递给咱们的数据</p>
+<p>​      &#x2F;&#x2F; console.log(xhr.responseText)</p>
+<p>​      &#x2F;&#x2F; 第一个判断表示ajax的状态是4的时候，才接收数据</p>
+<p>​      <strong>if(xhr.readyState &#x3D;&#x3D; 4){</strong></p>
+<p>​        &#x2F;&#x2F; 第二个判断表示http这个载体的状态是200没有问题的时候，才接收数据</p>
+<p>​        <strong>if(xhr.status &#x3D;&#x3D; 200){</strong></p>
+<p>​          <strong>console.log(xhr.responseText)</strong></p>
+<p>​        <strong>}else{</strong></p>
+<p>​          <strong>console.log(‘请求失败’)</strong></p>
+<p>​        <strong>}</strong></p>
+<p>​      <strong>}</strong></p>
+<p>​      &#x2F;&#x2F; 注意点：不推荐</p>
+<p>​      &#x2F;&#x2F; if(xhr.readyState &#x3D;&#x3D; 4 &amp;&amp; xhr.status &#x3D;&#x3D; 200){</p>
+<p>​      &#x2F;&#x2F;   console.log(xhr.responseText)</p>
+<p>​      &#x2F;&#x2F; }else{</p>
+<p>​      &#x2F;&#x2F;   console.log(‘请求失败’)</p>
+<p>​      &#x2F;&#x2F; }</p>
+<p>​    <strong>}</strong></p>
+<p>&#x2F;&#x2F; 发送请求（把请求发送出去）</p>
+<p>​    <strong>xhr.send()</strong></p>
+</blockquote>
+<h2 id="主体代码完整版-—get请求"><a href="#主体代码完整版-—get请求" class="headerlink" title="主体代码完整版 —get请求"></a>主体代码完整版 —get请求</h2><blockquote>
+<p>let  xhr &#x3D; new XMLHttpRequest()   </p>
+<p>xhr.open(‘get’, ‘<a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a>‘)</p>
+<p>xhr.onreadystatechange &#x3D; ()&#x3D;&gt;{</p>
+<p>if(xhr.readyState &#x3D;&#x3D; 4){</p>
+<p>if(xhr.status &#x3D;&#x3D; 200){</p>
+<p>​          console.log(xhr.responseText)</p>
+<p>​        }else{</p>
+<p>​          console.log(‘请求失败’)</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>}</p>
+<p>xhr.send()</p>
+</blockquote>
+<h2 id="get请求和post请求的区别"><a href="#get请求和post请求的区别" class="headerlink" title="get请求和post请求的区别"></a>get请求和post请求的区别</h2><p>get明文传输，可以直接获取到，post加密传输，更加安全</p>
+<p>在ajax中post请求比get请求多一个请求头，需要根据接口文件进行跟换使用，post传输的查询字符串没有？号连接</p>
+<p>get获取数据，post传输数据</p>
+<p>get传输数据有限，速度快</p>
+<p>post没有限制，较get速度较慢</p>
+<h2 id="http是超文本传输协议，"><a href="#http是超文本传输协议，" class="headerlink" title="http是超文本传输协议，"></a>http是超文本传输协议，</h2><p>  200：请求成功。用于GET和POSt请求</p>
+<p>  201：已创建。成功请求并创建了新的资源</p>
+<p>  304：未修改。所请求的资源没有修改，不会返回任何资源。客户端通过缓存访问资源。</p>
+<p>  400：客户端请求的语法错误，服务器无法理解。</p>
+<p>  401：请求要求用户的身份认证</p>
+<p>  403：服务器理解请求客服端的请求，但是不能执行。</p>
+<p>  404：客服端无法找到请求资源。</p>
+<p>  500：服务器内部错误，无法完成请求。</p>
+<p>  502：作为网关和代理工作服务器执行请求时，从远程服务器收到无效的响应。</p>
+<p>  503：服务器超载或者正在维护，暂时无法处理客户端请求。</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/05/26/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%A1%B5%E9%9D%A2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2023/05/26/%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title"></div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2023
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="wy的博客网站"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

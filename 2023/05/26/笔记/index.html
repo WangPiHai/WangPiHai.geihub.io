@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> wy的博客网站</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/05/26/%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2023-05-26T04:56:17.764Z" itemprop="datePublished">2023-05-26</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">8.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">34 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="4月28日"><a href="#4月28日" class="headerlink" title="4月28日"></a>4月28日</h1><h2 id="对象的方法"><a href="#对象的方法" class="headerlink" title="对象的方法"></a>对象的方法</h2><blockquote>
+<p>Array.isArray() 判断是不是一个数组</p>
+<p>isNaN() 判断非数字，如果是数字返回false，不是数字返回true </p>
+<p>instanceof表示判断实例化对象是否属于某个构造函数</p>
+<p>Object.hasOwnProperty 判断一个对象是否有该属性</p>
+</blockquote>
+<h2 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h2><blockquote>
+<p>浅拷贝：对象的复制只是复制对象的引用，可以改变原始数据的值</p>
+<p>深拷贝：彻底复制一个对象，而不是简单的拷贝对象的引用，拷贝后不会修改到原始数据的值</p>
+</blockquote>
+<h2 id="数据劫持"><a href="#数据劫持" class="headerlink" title="数据劫持"></a>数据劫持</h2><blockquote>
+<p>使用数据劫持，劫持这个对象，给对象里面的属性做一些限定</p>
+<p>​    &#x2F;&#x2F; 参数1表示被劫持的对象</p>
+<p>​    &#x2F;&#x2F; 参数2表示对哪些属性做限定（设置一个新的属性，如果对象里面没有这个属性表示新设置，如果有会把已经存在的属性覆盖掉）</p>
+<p>​    &#x2F;&#x2F; 参数3表示一个对象，可以在这个对象里面做一些配置项</p>
+<p>​    &#x2F;&#x2F; Object.defineProperty(obj, ‘name’, {</p>
+<p>​    &#x2F;&#x2F;   &#x2F;&#x2F; 设置属性值</p>
+<p>​    &#x2F;&#x2F;   value: ‘刘浚’</p>
+<p>​    &#x2F;&#x2F; })</p>
+</blockquote>
+<h3 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h3><blockquote>
+<p>属性：value、writable、configurable、enumerable</p>
+<p>value和writable不能一起使用</p>
+</blockquote>
+<h2 id="ES6数据代理"><a href="#ES6数据代理" class="headerlink" title="ES6数据代理"></a>ES6数据代理</h2><blockquote>
+<p>Proxy数据代理<br>           + ES6新增的，是数据劫持的一个升级版本<br>                      + 使用Object.defineProperty()这个方法的时候，需要额外的写一个对象设置初始值，Proxy不需要你写了。Proxy可以一次性劫持多个属性<br>                      + Proxy是对象数据劫持的封装</p>
+<pre><code>                 =&gt; vue2中使用的数据响应是Object.defineProperty()
+                 =&gt; vue3中使用的数据响应是Proxy
+</code></pre>
+</blockquote>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><blockquote>
+<p>let result &#x3D; new Proxy(obj, {</p>
+<p>​      &#x2F;&#x2F; target表示目标对象（你需要代理那个对象）</p>
+<p>​      &#x2F;&#x2F; property表示代理对象的属性</p>
+<p>​      get(target, property){</p>
+<p>​        return target[property]</p>
+<p>​      },</p>
+<p>​      &#x2F;&#x2F; value表示新设置的属性值</p>
+<p>​      set(target, property, value){</p>
+<p>​        target[property] &#x3D; value</p>
+<p>​        render()</p>
+<p>​      }</p>
+<p>​    })</p>
+</blockquote>
+<h1 id="5月4日"><a href="#5月4日" class="headerlink" title="5月4日"></a>5月4日</h1><h2 id="this对象总结"><a href="#this对象总结" class="headerlink" title="this对象总结"></a>this对象总结</h2><blockquote>
+<p>在全局执行上下文对象中打印this对象将指向window对象</p>
+<p>在函数中打印this对象，并用函数名加括号的方式调用，this指向window对象</p>
+<p>在对象方法中打印this对象，this指向这个对象本身</p>
+<p>在事件中调用函数，函数中的this指向这个事件的调用者</p>
+<p>如果是构造函数的实例化对象调用函数，this指向的是实例化对象本身</p>
+<p>箭头函数没有自己的this，它的this指向上一层代码</p>
+</blockquote>
+<h2 id="异步与同步"><a href="#异步与同步" class="headerlink" title="异步与同步"></a>异步与同步</h2><blockquote>
+<p>同步指的是上层代码执行完毕才会执行下层代码</p>
+<p>异步指的是不同的代码在同一个时间段执行，定时器，延时器，函数都是异步执行</p>
+</blockquote>
+<h2 id="IIFE函数（自执行函数）"><a href="#IIFE函数（自执行函数）" class="headerlink" title="IIFE函数（自执行函数）"></a>IIFE函数（自执行函数）</h2><blockquote>
+<p>这是一个IIFE函数，调用结束将自动销毁内存，可以有返回值</p>
+<p>(function fn(){  …..  })()</p>
+<p>(function fn(){  …..  }())</p>
+<p>!(function fn(){  …..  })()</p>
+<p>~(function fn(){  …..  })()</p>
+</blockquote>
+<h2 id="伪模块化页面功能开发"><a href="#伪模块化页面功能开发" class="headerlink" title="伪模块化页面功能开发"></a>伪模块化页面功能开发</h2><blockquote>
+<p>在独立的代码文件中将需要传递出去的变量或者方法挂载到window对象上，在任何区域都可以调用</p>
+</blockquote>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><blockquote>
+<p>有一个函数A中返回一个函数B</p>
+<p>在函数A外部有变量引用这个函数B</p>
+<p>B函数内部访问着函数A内部的私有变量</p>
+</blockquote>
+<h3 id="闭包的应用"><a href="#闭包的应用" class="headerlink" title="闭包的应用"></a>闭包的应用</h3><blockquote>
+<p>通过闭包可以让外部访问到函数内部的变量</p>
+<p>通过闭包可以让局部变量持续保存下来，不会随着它的上下文环境一起销毁（延长变量的生命周期）</p>
+<p>可以解决全局变量污染的问题</p>
+</blockquote>
+<h4 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h4><blockquote>
+<p>解决循环遍历绑定事件</p>
+<p>函数柯理化</p>
+<p>防抖节流</p>
+<p>单例模式</p>
+<p>vue    data</p>
+</blockquote>
+<h4 id="闭包面试题"><a href="#闭包面试题" class="headerlink" title="闭包面试题"></a>闭包面试题</h4><blockquote>
+<p>function fun(n, o) {</p>
+<p>​      console.log(o)</p>
+<p>​      const obj &#x3D; {</p>
+<p>​        fun: function (m) {</p>
+<p>​          return fun(m, n)</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​      return obj</p>
+<p>​    }</p>
+<p>var res &#x3D; fun(0)    &#x2F;&#x2F; undefined </p>
+<p>fun(1)      &#x2F;&#x2F;0</p>
+<p>fun(2)      &#x2F;&#x2F;0</p>
+<p>…….</p>
+<p>fun(0).fun(1).fun(2).fun(3).fun(4)    &#x2F;&#x2F; undefined   0   1   2   3</p>
+<p>注意点是：执行空间是否被开辟，以及变量是否被缓存</p>
+</blockquote>
+<h2 id="改变this指向的方法"><a href="#改变this指向的方法" class="headerlink" title="改变this指向的方法"></a>改变this指向的方法</h2><p>bind()方法：修改函数或方法中的this为指定的对象，并且会返回一个修改后的之后的新的函数给我们</p>
+<p>call()方法: 修改函数或方法中的this为指定的对象，并且会立即调用修改之后的函数</p>
+<p>apply()方法: 修改函数或方法中的this为指定的对象，并且会立即调用修改之后的函数</p>
+<p>apply与call的区别在于传递参数的时候必须使用使用数组</p>
+<h1 id="5月5日"><a href="#5月5日" class="headerlink" title="5月5日"></a>5月5日</h1><h2 id="函数柯理化"><a href="#函数柯理化" class="headerlink" title="函数柯理化"></a>函数柯理化</h2><blockquote>
+<p>将一次参数传递分作多次传递</p>
+</blockquote>
+<h3 id="函数柯理化封装"><a href="#函数柯理化封装" class="headerlink" title="函数柯理化封装"></a>函数柯理化封装</h3><blockquote>
+<p><strong>function fn(a,b,c,d){</strong></p>
+<p>​    <strong>return a+b+c+d</strong></p>
+<p>​    <strong>}</strong></p>
+<p>​    <strong>function outFn(fn,…arr){</strong> &#x2F;&#x2F;传入组合方法和非具体数量的参数存入arr数组中</p>
+<p>​    <strong>let outArr&#x3D;arr || []</strong>  &#x2F;&#x2F; 定义outArr，当arr为空时，添加为空值</p>
+<p>​    <strong>let len&#x3D;fn.length</strong>  &#x2F;&#x2F;存储方法需要的参数数量</p>
+<p>​    <strong>return function(…arr1){</strong>  &#x2F;&#x2F;传入参数</p>
+<p>​      <strong>outArr&#x3D;[…outArr, …arr1]</strong>  &#x2F;&#x2F;组合过往的outArr和现在传入的arr1成为新的outArr数组</p>
+<p>​      <strong>if(outArr.length&gt;&#x3D;len){</strong>  &#x2F;&#x2F;传入参数数量判定，符合fn方法则传出组合</p>
+<p>​        <strong>return fn(…outArr)</strong></p>
+<p>​      <strong>}else{</strong>          &#x2F;&#x2F;不符合则重新传入outFn函数进行参数数量组合</p>
+<p>​        <strong>return outFn(fn,…outArr)</strong></p>
+<p>​      <strong>}</strong></p>
+<p>​    <strong>}</strong></p>
+<p>​    <strong>}</strong></p>
+<p>​    <strong>let res&#x3D;outFn(fn)</strong></p>
+<p>​    <strong>console.log(res(‘https:&#x2F;&#x2F;‘)(‘<a target="_blank" rel="noopener" href="http://www.baidu.com:')('443')('/Home')">www.baidu.com:&#39;)(&#39;443&#39;)(&#39;/Home&#39;)</a>)</strong></p>
+<p>&#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://www.baidu.com/Home">https://www.baidu.com:443/Home</a></p>
+</blockquote>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>AMD 		前置依赖</p>
+<p>CMD         按需导入</p>
+<p>ES6   module</p>
+<blockquote>
+<script type="module">
+</blockquote>
+<h3 id="导出方式"><a href="#导出方式" class="headerlink" title="导出方式"></a>导出方式</h3><blockquote>
+<p>export</p>
+<p>export{变量1，变量2}</p>
+<p>export default 默认导出</p>
+</blockquote>
+<h3 id="导入方式"><a href="#导入方式" class="headerlink" title="导入方式"></a>导入方式</h3><blockquote>
+<p>import {变量1 as 重命名，变量2} from 地址 对象解构去匹配导出的整个对象中的相同的变量名，没有匹配到为undefined，可以重命名</p>
+<p>import 变量 from 地址,默认导入，可以接收到默认导出</p>
+<p>import * as 变量名 from 地址,全部导入，可以接收到文件中的所有导出，包括默认导出。</p>
+</blockquote>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><blockquote>
+<p>存在于两个构造函数之间，子类从父类构造函数上面继承相同的方法和属性</p>
+</blockquote>
+<h3 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h3><blockquote>
+<p>​    Son.prototype &#x3D; new Person(‘刘海涛’, 25)</p>
+</blockquote>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<p>不管是在父类构造函数体类 还是原型对象上面 都可以继承过来 </p>
+</blockquote>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<p>需要在多个地方传递参数 </p>
+<p>如果在子类构造函数的原型对象上面添加方法和属性的时候  添加到父类实例化对象里面了</p>
+</blockquote>
+<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3><blockquote>
+<p>Person.call(this)</p>
+</blockquote>
+<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<p>只需要在一个地方进行传参  </p>
+</blockquote>
+<h4 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<p>只能继承父类构造函数体类的方法和属性 不能继承原型对象上面的方法和属性</p>
+</blockquote>
+<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><blockquote>
+<p>Son.prototype &#x3D; new Person(‘刘海涛’, 25)</p>
+<p>Person.call(this)</p>
+</blockquote>
+<h4 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h4><blockquote>
+<p>只需要在一个地方进行传参  </p>
+</blockquote>
+<h4 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<p>在子类的原型对象上面添加方法和属性  实际上添加到了父类的实例化对象上面</p>
+</blockquote>
+<h3 id="ES6继承"><a href="#ES6继承" class="headerlink" title="ES6继承"></a>ES6继承</h3><blockquote>
+<p>class Son extends Person{</p>
+<p>super()</p>
+<p>…….</p>
+<p>}</p>
+</blockquote>
+<h1 id="5月6日"><a href="#5月6日" class="headerlink" title="5月6日"></a>5月6日</h1><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><blockquote>
+<p>一个构造函数只生成一个实例化对象</p>
+</blockquote>
+<p>核心代码</p>
+<blockquote>
+<p>let instance&#x3D;null </p>
+<p>function Fn(){</p>
+<p>if(!instance){</p>
+<p>instance&#x3D;new   Person()</p>
+<p>}</p>
+<p>return instance</p>
+<p>}</p>
+</blockquote>
+<p>从单例模式实例化的对象使用地址是一致的，既可以全等</p>
+<h2 id="发布订阅者模式"><a href="#发布订阅者模式" class="headerlink" title="发布订阅者模式"></a>发布订阅者模式</h2><p>实例化对象方法中保存用户的操作记录，在获取到用户的操作时，找到对应的方法反馈，在存储操作记录的对象没有用户时，函数将不会执行。</p>
+<blockquote>
+<p>定义一个构造函数 class<br>               + 属性<br>                  + 存储订阅消息的对象<br>                  +  {<br>                     xiyou:[打电话,发微信，qq]<br>                     }<br>                               + 方法<br>                  +  on  订阅<br>                  +  off  取消订阅<br>                  +  emit  执行消息队列</p>
+</blockquote>
+<h2 id="单页面应用spa"><a href="#单页面应用spa" class="headerlink" title="单页面应用spa"></a>单页面应用spa</h2><blockquote>
+<p>SPA<br>         + single page application<br>                   + 一个项目里面只有一个index.html<br>                  + 一般应用在 移动端  或者pc后台管理系统  </p>
+<pre><code> +  前端开发  面向过程  面向对象  组件化开发
+ + 一个完整的组件 (html+css +js) 
+ + 切换组件的依赖  
+ + hash 根据hash值的变化 去切换不同的组件 (重点)
+ + history 根据变换切换不同的组件    
+</code></pre>
+</blockquote>
+<h3 id="具体实现-hash路由"><a href="#具体实现-hash路由" class="headerlink" title="具体实现    :hash路由"></a>具体实现    :hash路由</h3><blockquote>
+<a href="#/地址" >
+
+<p>改变地址栏中的hash值，再根据此hash值加载不同的组件</p>
+</blockquote>
+<h1 id="5月8日"><a href="#5月8日" class="headerlink" title="5月8日"></a>5月8日</h1><h2 id="认识node"><a href="#认识node" class="headerlink" title="认识node"></a>认识node</h2><blockquote>
+<p>基于 chrome V8引擎 运行时环境   </p>
+<ul>
+<li><p>运行js代码</p>
+</li>
+<li><p>ECMAscript<br>      + 使用  </p>
+</li>
+<li><p>操作磁盘 </p>
+</li>
+<li><p>写后端 开启服务器 连接数据库</p>
+</li>
+</ul>
+</blockquote>
+<p>运行当前文件下的文件，需要打开命令执行窗口，node+文件名 执行文件</p>
+<h2 id="node模块化"><a href="#node模块化" class="headerlink" title="node模块化"></a>node模块化</h2><ul>
+<li><p>分类</p>
+<blockquote>
+<p>自定义模块</p>
+<p>内置模块</p>
+<p>第三方模块</p>
+</blockquote>
+</li>
+<li><p>模块化遵循common.js规范</p>
+</li>
+<li><p>导出使用module.exports&#x3D;()</p>
+</li>
+<li><p>导入使用require，类似exports</p>
+</li>
+</ul>
+<h3 id="内置模块：fs模块-提供读写功能"><a href="#内置模块：fs模块-提供读写功能" class="headerlink" title="内置模块：fs模块  (提供读写功能)"></a>内置模块：fs模块  (提供读写功能)</h3><ul>
+<li><p>const  fs &#x3D;require(‘fs’)   &#x2F;&#x2F;&#x2F;&#x2F;导入fs模块方法</p>
+</li>
+<li><p>同步写入</p>
+<blockquote>
+<p>fs.writeFileSync(‘文件路径’，’写入内容’)</p>
+</blockquote>
+</li>
+<li><p>异步写入</p>
+<blockquote>
+<p>fs.writeFile(‘文件路径’，’写入内容’，(err)&#x3D;&gt;{</p>
+<p>console.log(data)   &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;err在写入成功时使用</p>
+<p>})</p>
+</blockquote>
+</li>
+<li><p>同步读取</p>
+<blockquote>
+<p>fs.readFileSync(‘文件路径’，’utf-8’)</p>
+</blockquote>
+</li>
+<li><p>异步读取</p>
+<blockquote>
+<p>fs.readFile(‘文件路径’，’utf-8’，(err,data)&#x3D;&gt;{</p>
+<p>console.log(data)   &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;err在报错时使用</p>
+<p>})</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="内置模块：path模块-用来操作路径"><a href="#内置模块：path模块-用来操作路径" class="headerlink" title="内置模块：path模块  (用来操作路径)"></a>内置模块：path模块  (用来操作路径)</h3><ul>
+<li><p>const  path &#x3D;require(‘path’)   &#x2F;&#x2F;&#x2F;&#x2F;导入path模块方法</p>
+</li>
+<li><p>组装相对路径   join</p>
+<blockquote>
+<p>let  res &#x3D; path.join(‘..’,’a’,’b’,’c.html’)</p>
+</blockquote>
+</li>
+<li><p>组装绝对路径   resolve</p>
+</li>
+</ul>
+<blockquote>
+<p>let  res  &#x3D; path.resolve(‘a’,’b’,’c.html’)</p>
+</blockquote>
+<ul>
+<li>解析   parse</li>
+</ul>
+<blockquote>
+<p>let  res  &#x3D; path.parse(‘D:&#x2F;2302&#x2F;25_DAY&#x2F;03_代码&#x2F;06-path模块&#x2F;a&#x2F;b&#x2F;c.html’)</p>
+<p>解析结果：</p>
+<p>{</p>
+<p>root: ‘D:&#x2F;‘,  &#x2F;&#x2F; 根目录</p>
+<p>dir: ‘D:&#x2F;2302&#x2F;25_DAY&#x2F;03_代码&#x2F;06-path模块&#x2F;a&#x2F;b’, &#x2F;&#x2F; 详细的路径</p>
+<p>base: ‘c.html’, &#x2F;&#x2F;  完整的文件(文件名和文件类型 )</p>
+<p>ext: ‘.html’,  &#x2F;&#x2F; 文件类型</p>
+<p>name: ‘c’   &#x2F;&#x2F; 文件名</p>
+<p>}</p>
+</blockquote>
+<h3 id="内置模块：url-模块"><a href="#内置模块：url-模块" class="headerlink" title="内置模块：url 模块"></a>内置模块：url 模块</h3><ul>
+<li><p>const  url &#x3D;require(‘url’)   &#x2F;&#x2F;&#x2F;&#x2F;导入url模块方法</p>
+</li>
+<li><p>解析   parse</p>
+</li>
+</ul>
+<blockquote>
+<p>const  res &#x3D; url.parse(‘<a target="_blank" rel="noopener" href="https://www.baidu.com/login?pageSize=12&current=1#/a/b/c.html',true">https://www.baidu.com:443/login?pageSize=12&amp;current=1#/a/b/c.html&#39;,true</a>)</p>
+<p>&#x2F;&#x2F;  第二个参数代表是否深度解析，可以使用对象</p>
+<p>解析结果：</p>
+<p>Url {</p>
+<p>protocol: ‘https:’, &#x2F;&#x2F; 协议</p>
+<p>slashes: true,  &#x2F;&#x2F;    &lt;&#x3D;代表这个符号</p>
+<p>auth: null,</p>
+<p>host: ‘<a target="_blank" rel="noopener" href="http://www.baidu.com:443/">www.baidu.com:443</a>‘, &#x2F;&#x2F; 域名+ 端口号</p>
+<p>port: ‘443’,  &#x2F;&#x2F;  端口号</p>
+<p>hostname: ‘<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>‘, &#x2F;&#x2F; 域名</p>
+<p>hash: ‘#&#x2F;a&#x2F;b&#x2F;c.html’,  &#x2F;&#x2F; hash值</p>
+<p>search: ‘?pageSize&#x3D;12&amp;current&#x3D;1’,  &#x2F;&#x2F; 查询字符串</p>
+<p>query: ‘pageSize&#x3D;12&amp;current&#x3D;1’,  &#x2F;&#x2F; 请求的参数</p>
+<p>pathname: ‘&#x2F;login’,  &#x2F;&#x2F; 文件地址</p>
+<p>path: ‘&#x2F;login?pageSize&#x3D;12&amp;current&#x3D;1’,  &#x2F;&#x2F; 完整的地址</p>
+<p>href: ‘<a target="_blank" rel="noopener" href="https://www.baidu.com/login?pageSize=12&current=1#/a/b/c.html">https://www.baidu.com:443/login?pageSize=12&amp;current=1#/a/b/c.html</a>‘ &#x2F;&#x2F;</p>
+<p>}</p>
+</blockquote>
+<h3 id="内置模块：http模块"><a href="#内置模块：http模块" class="headerlink" title="内置模块：http模块"></a>内置模块：http模块</h3><ul>
+<li><p>const  http &#x3D;require(‘http’)   &#x2F;&#x2F;&#x2F;&#x2F;导入http模块方法</p>
+</li>
+<li><p>创建一个服务</p>
+<blockquote>
+<p>const  server &#x3D; http.createServer((req,res)&#x3D;&gt;{</p>
+<p> &#x2F;&#x2F; 只要你访问我们的服务 都会从这个回调函数里面经过</p>
+<p> &#x2F;&#x2F; req  request  请求的所有信息 </p>
+<p> &#x2F;&#x2F;  res  response  响应的所有的信息  </p>
+<p> &#x2F;&#x2F; res.end()  给前端返回东西  只能返回字符串  </p>
+<p> console.log(req.url)  </p>
+<p> if(req.url &#x3D;&#x3D; ‘&#x2F;login.html’){</p>
+<p>​    fs.readFile(‘.&#x2F;client&#x2F;html&#x2F;login.html’,’utf-8’,(err,data)&#x3D;&gt;{</p>
+<p>​      if(err)  return res.end(‘error’)</p>
+<p>​      &#x2F;&#x2F; 走到这里 表示读取成功了</p>
+<p>​      res.end(data)</p>
+<p>​    })</p>
+<p> }else if(req.url &#x3D;&#x3D; ‘&#x2F;login.css’){</p>
+<p>​    fs.readFile(‘.&#x2F;client&#x2F;css&#x2F;login.css’,’utf-8’,(err,data)&#x3D;&gt;{</p>
+<p>​      if(err)  return res.end(‘error’)</p>
+<p>​      &#x2F;&#x2F; 走到这里 表示读取成功了</p>
+<p>​      res.end(data)</p>
+<p>​    })</p>
+<p> }else{</p>
+<p>​    res.end(‘not found’)</p>
+<p> }</p>
+<p> &#x2F;&#x2F; res.end(‘hello node111111111111111111111111111’)</p>
+<p>})</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h2><blockquote>
+<p>npm init    初始化</p>
+<p>npm  i  包名@版本号  –save-dev(下载到开发环境，不添加默认下载到生产环境)</p>
+<p>npm uni  包名    卸载包</p>
+</blockquote>
+<h1 id="5月9日"><a href="#5月9日" class="headerlink" title="5月9日"></a>5月9日</h1><h2 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h2><blockquote>
+<p><strong>let  xhr &#x3D; new XMLHttpRequest()    &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;创建ajax实例化对象</strong></p>
+<p><strong>xhr.open(‘get’, ‘<a target="_blank" rel="noopener" href="http://localho/">http://localho</a>‘)</strong></p>
+<p>&#x2F;&#x2F; 配置请求信息</p>
+<p>​    &#x2F;*</p>
+<p>​      参数</p>
+<p>​      + 参数1表示请求方式（get或者post）</p>
+<p>​      + 参数2表示请求地址（你向谁发生请求）</p>
+<p>​      + 参数3表示异步（true，默认）或者同步（false，99.99999%不会用到）</p>
+<p>​    *&#x2F;</p>
+<p><strong>xhr.onreadystatechange &#x3D; ()&#x3D;&gt;{</strong></p>
+<p>​      &#x2F;&#x2F; xhr.readyState &#x3D; 2时-发送数据, send()方法调用, 但是当前的状态及http头未知,请求未完成</p>
+<p>​      &#x2F;&#x2F; xhr.readyState &#x3D; 3时-数据传输中, 接受部分数据</p>
+<p>​      &#x2F;&#x2F; xhr.readyState &#x3D; 4时-响应内容解析完成</p>
+<p>​      &#x2F;&#x2F; console.log(xhr.readyState)</p>
+<p>​      &#x2F;&#x2F; xhr.responseText 表示接收后端传递给咱们的数据</p>
+<p>​      &#x2F;&#x2F; console.log(xhr.responseText)</p>
+<p>​      &#x2F;&#x2F; 第一个判断表示ajax的状态是4的时候，才接收数据</p>
+<p>​      <strong>if(xhr.readyState &#x3D;&#x3D; 4){</strong></p>
+<p>​        &#x2F;&#x2F; 第二个判断表示http这个载体的状态是200没有问题的时候，才接收数据</p>
+<p>​        <strong>if(xhr.status &#x3D;&#x3D; 200){</strong></p>
+<p>​          <strong>console.log(xhr.responseText)</strong></p>
+<p>​        <strong>}else{</strong></p>
+<p>​          <strong>console.log(‘请求失败’)</strong></p>
+<p>​        <strong>}</strong></p>
+<p>​      <strong>}</strong></p>
+<p>​      &#x2F;&#x2F; 注意点：不推荐</p>
+<p>​      &#x2F;&#x2F; if(xhr.readyState &#x3D;&#x3D; 4 &amp;&amp; xhr.status &#x3D;&#x3D; 200){</p>
+<p>​      &#x2F;&#x2F;   console.log(xhr.responseText)</p>
+<p>​      &#x2F;&#x2F; }else{</p>
+<p>​      &#x2F;&#x2F;   console.log(‘请求失败’)</p>
+<p>​      &#x2F;&#x2F; }</p>
+<p>​    <strong>}</strong></p>
+<p>&#x2F;&#x2F; 发送请求（把请求发送出去）</p>
+<p>​    <strong>xhr.send()</strong></p>
+</blockquote>
+<h2 id="主体代码完整版-—get请求"><a href="#主体代码完整版-—get请求" class="headerlink" title="主体代码完整版 —get请求"></a>主体代码完整版 —get请求</h2><blockquote>
+<p>let  xhr &#x3D; new XMLHttpRequest()   </p>
+<p>xhr.open(‘get’, ‘<a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a>‘)</p>
+<p>xhr.onreadystatechange &#x3D; ()&#x3D;&gt;{</p>
+<p>if(xhr.readyState &#x3D;&#x3D; 4){</p>
+<p> if(xhr.status &#x3D;&#x3D; 200){</p>
+<p>​          console.log(xhr.responseText)</p>
+<p>​        }else{</p>
+<p>​          console.log(‘请求失败’)</p>
+<p>​        }</p>
+<p>​      }</p>
+<p> }</p>
+<p>  xhr.send()</p>
+</blockquote>
+<h2 id="get请求和post请求的区别"><a href="#get请求和post请求的区别" class="headerlink" title="get请求和post请求的区别"></a>get请求和post请求的区别</h2><p>get明文传输，可以直接获取到，post加密传输，更加安全</p>
+<p>在ajax中post请求比get请求多一个请求头，需要根据接口文件进行跟换使用，post传输的查询字符串没有？号连接</p>
+<p>get获取数据，post传输数据</p>
+<p>get传输数据有限，速度快</p>
+<p>post没有限制，较get速度较慢</p>
+<h2 id="http是超文本传输协议，"><a href="#http是超文本传输协议，" class="headerlink" title="http是超文本传输协议，"></a>http是超文本传输协议，</h2><p>  200：请求成功。用于GET和POSt请求</p>
+<p>  201：已创建。成功请求并创建了新的资源</p>
+<p>  304：未修改。所请求的资源没有修改，不会返回任何资源。客户端通过缓存访问资源。</p>
+<p>  400：客户端请求的语法错误，服务器无法理解。</p>
+<p>  401：请求要求用户的身份认证</p>
+<p>  403：服务器理解请求客服端的请求，但是不能执行。</p>
+<p>  404：客服端无法找到请求资源。</p>
+<p>  500：服务器内部错误，无法完成请求。</p>
+<p>  502：作为网关和代理工作服务器执行请求时，从远程服务器收到无效的响应。</p>
+<p>  503：服务器超载或者正在维护，暂时无法处理客户端请求。</p>
+<h1 id="5月10日"><a href="#5月10日" class="headerlink" title="5月10日"></a>5月10日</h1><h2 id="回调地狱"><a href="#回调地狱" class="headerlink" title="回调地狱"></a>回调地狱</h2><p>在使用回调函数时重复嵌套，下层函数需要上层函数的返回值作为参数。</p>
+<h2 id="Promise使用"><a href="#Promise使用" class="headerlink" title="Promise使用"></a>Promise使用</h2><p>promise是es6引入的一个异步编程解决方案</p>
+<p>它有三种执行状态-&gt;pending（执行中）fulfilled（已成功）rejected（失败）</p>
+<blockquote>
+<p>new Promise(()&#x3D;&gt;{</p>
+<p>})</p>
+</blockquote>
+<p>.<strong>then</strong>(callback)      (成功时调用)</p>
+<p>.<strong>catch</strong>(callback)      (失败时调用)</p>
+<h2 id="Express框架使用"><a href="#Express框架使用" class="headerlink" title="Express框架使用"></a>Express框架使用</h2><ul>
+<li>npm下载express框架</li>
+</ul>
+<p><strong>npm i express</strong></p>
+<ul>
+<li>引入express框架</li>
+</ul>
+<p><strong>const  express&#x3D;require(‘express’)</strong></p>
+<ul>
+<li>使用express提供的函数</li>
+</ul>
+<p><strong>const app&#x3D;express( )</strong></p>
+<ul>
+<li>监听端口号</li>
+</ul>
+<p><strong>app.listen(端口号，()&#x3D;&gt;{</strong><br><strong>})</strong></p>
+<ul>
+<li>页面静态托管</li>
+</ul>
+<p><strong>app.use(express.static(静态资源文件路径)</strong></p>
+<ul>
+<li>定义接口</li>
+</ul>
+<p><strong>app.get()或app.post()</strong></p>
+<p>app.get()中如果传递的数据给后端，那么可以用req.query来就结束</p>
+<p>app.post()在使用了app.use（express.urlencoded()）方法后，在接口里面使用req.body获取到传递进来的参数</p>
+<h2 id="async和await的使用"><a href="#async和await的使用" class="headerlink" title="async和await的使用"></a>async和await的使用</h2><p>&#x2F;&#x2F; Promise作用：其实就是对回调地狱代码的改造，让代码看起来更优雅，异步执行async中的await函数</p>
+<p>async function fn(){</p>
+<p>let res &#x3D; awiat  回调函数</p>
+<p>}</p>
+<h1 id="5月11日"><a href="#5月11日" class="headerlink" title="5月11日"></a>5月11日</h1><h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><blockquote>
+<p>为了网站安全，不允许访问其他服务器</p>
+<p>规则为：协议、域名、端口号中有一个不相同，服务器就属于跨域访问</p>
+</blockquote>
+<h2 id="解决跨域问题"><a href="#解决跨域问题" class="headerlink" title="解决跨域问题"></a>解决跨域问题</h2><h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><blockquote>
+<p>利于浏览器src属性的漏洞解决跨域</p>
+<p>src属性不受同源策略的影响</p>
+<ul>
+<li>在script标记中的src属性会将引入的文件当作js文件解析</li>
+</ul>
+<p>jsonp方式只支持get请求，可以传递参数。</p>
+<p>封装思路：</p>
+<ul>
+<li>创建一个script标签</li>
+<li>对传递进来的参数进行对象转字符串，并赋值给src属性</li>
+<li>将script标签插入到body中</li>
+</ul>
+</blockquote>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><blockquote>
+<p>npm下载cors包进行引用</p>
+<p>在服务器中使用use方法使用cors方法中的函数</p>
+<p>前端可以利用ajax来请求访问跨域执行的服务器</p>
+<p><i style="font-size:14px">ps：传递回来的数据类型为字符串类型</i></p>
+</blockquote>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><ul>
+<li>设置cookie</li>
+</ul>
+<blockquote>
+<p>document.cookie&#x3D;’存储名称&#x3D;存储的值;expires&#x3D;过期时间;path&#x3D;文件路径（直接用 &#x2F; 表示根目录） ‘</p>
+</blockquote>
+<ul>
+<li><p>读取cookie</p>
+<blockquote>
+<p>document.cookie</p>
+</blockquote>
+</li>
+<li><p>删除cookie</p>
+<blockquote>
+<p>设置过期时间为-1即可</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>encodeURIComponent对中文进行转码</p>
+<p>decodeURIComponent对中文解析解码</p>
+<p>toUTCString()方法转成了标准时区，转成了系统时间</p>
+<ul>
+<li>autocomplete可以关闭浏览器自动填充</li>
+</ul>
+</blockquote>
+<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><blockquote>
+<p>设置时间时，需要设置系统时间，避免过期时间永久累加</p>
+<p>从Cookie获取数据时，分号后需要增加一个空格</p>
+<p>从内部文件可以获取到外部文件的Cookie，但是外部文件不能获取到内部的文件</p>
+</blockquote>
+<h1 id="5月12日"><a href="#5月12日" class="headerlink" title="5月12日"></a>5月12日</h1><h2 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h2><blockquote>
+<p>h5新增的数据存储空间,存储的对象格式为JSON，在传输和读取时都要进行字符转换</p>
+</blockquote>
+<ul>
+<li><p>存储数据</p>
+<blockquote>
+<p>localStorage.setItem(‘属性名’，’属性值’)</p>
+</blockquote>
+</li>
+<li><p>读取数据</p>
+<blockquote>
+<p>localStorage.getItem(‘属性名’)</p>
+</blockquote>
+</li>
+<li><p>删除数据</p>
+<blockquote>
+<p>localStorage.removeItem(‘属性名’)</p>
+</blockquote>
+</li>
+<li><p>清除所有</p>
+<blockquote>
+<p>localStorage.clear()</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><ul>
+<li><p>dataset</p>
+<blockquote>
+<p>ele.dataset.属性名&#x3D;属性值</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>dataset上设置的属性将在标签中看到</p>
+<p>也可以在标记中直接设置data-属性名&#x3D;属性值</p>
+</blockquote>
+<h2 id="模块化回顾"><a href="#模块化回顾" class="headerlink" title="模块化回顾"></a>模块化回顾</h2><h3 id="AMD异步模块化定义"><a href="#AMD异步模块化定义" class="headerlink" title="AMD异步模块化定义"></a>AMD异步模块化定义</h3><ul>
+<li>依赖前置：提前引入，一次性引入全部的模块，前期消耗比较大，后期执行效率很高</li>
+</ul>
+<h3 id="CMD通用模块定义"><a href="#CMD通用模块定义" class="headerlink" title="CMD通用模块定义"></a>CMD通用模块定义</h3><ul>
+<li>按需加载：在代码执行过程中加载需要的模块，执行效率比较平稳</li>
+</ul>
+<h3 id="ES6模块化"><a href="#ES6模块化" class="headerlink" title="ES6模块化"></a>ES6模块化</h3><ul>
+<li><p>导出</p>
+<blockquote>
+<p>export default{<br>}</p>
+</blockquote>
+</li>
+<li><p>导入</p>
+<blockquote>
+<p>import {接受变量} from ‘js文件路径’</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="防抖和节流"><a href="#防抖和节流" class="headerlink" title="防抖和节流"></a>防抖和节流</h2><h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><ul>
+<li>在响应用户触发事件过于频繁时，只执行最后一次事件的操作</li>
+</ul>
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><ul>
+<li>控制事件的执行次数</li>
+</ul>
+<blockquote>
+<p>在控制滚动条时，添加开关机制，用户操作一段时间才去执行事件代码。</p>
+</blockquote>
+<blockquote>
+<p>if(fleg){</p>
+<p>fleg&#x3D;false</p>
+<p>{</p>
+<p>进行事件执行 。。。。</p>
+<p>fleg&#x3D;true</p>
+<p>}</p>
+<p>}</p>
+</blockquote>
+<h2 id="购物车代码逻辑"><a href="#购物车代码逻辑" class="headerlink" title="购物车代码逻辑"></a>购物车代码逻辑</h2><blockquote>
+<p>用户点击加入购物车按钮，js获取到事件并将当前商品赋值给goods变量。list变量用于存储以获取到的goods变量中的商品以及商品数量，首先进行非空验证，如果空则将goods中的商品赋值给list并增加一次cart_num属性；如果不空则进行重复剔除，并增加一次cart_num的值，如果不重复，则将goods中的商品赋值给list并增加一次cart_num属性值</p>
+</blockquote>
+<h1 id="5月13日"><a href="#5月13日" class="headerlink" title="5月13日"></a>5月13日</h1><blockquote>
+<p>ajax可以直接请求本地的json文件</p>
+</blockquote>
+<h2 id="购物车页面代码逻辑"><a href="#购物车页面代码逻辑" class="headerlink" title="购物车页面代码逻辑"></a>购物车页面代码逻辑</h2><ul>
+<li>单选选项</li>
+</ul>
+<blockquote>
+<p>获取到当前单选选项的自定义属性，通过对比获取到当前需要操作的数据，将属性取反并重新渲染页面</p>
+</blockquote>
+<ul>
+<li>多选选项</li>
+</ul>
+<blockquote>
+<p>获取到复选框的状态，遍历数据拿到所有的单选选项状态数据，状态为true时，将checked属性显示出来，并重新渲染页面</p>
+</blockquote>
+<ul>
+<li>删除选项（单个）</li>
+</ul>
+<blockquote>
+<p>获取到当前单选框的自定义属性，在数据中找到当前需要操作的数据下标，在整个数据表中删除..splice(index,1)，并重新渲染页面，将多选选项变为false</p>
+</blockquote>
+<ul>
+<li>删除选项（多选）</li>
+</ul>
+<blockquote>
+<p>获取到当前状态为true的单选选项，拿到对应的数据，在整个数据表中删除，并重新渲染页面，将多选选项变为false </p>
+</blockquote>
+<ul>
+<li>增加数量</li>
+</ul>
+<blockquote>
+<p>通过自定义属性找到数据表中当前需要操作的数据数量，进行自增，在重新渲染页面</p>
+</blockquote>
+<ul>
+<li>减少数量</li>
+</ul>
+<blockquote>
+<p>通过自定义属性找到数据表中当前需要操作的数据数量，进行自减，在重新渲染页面</p>
+</blockquote>
+<ul>
+<li>计算商品的数量和总价</li>
+</ul>
+<blockquote>
+<p>定义变量用于保存数量和价格，在遍历数据，拿到当前单选状态为true的数据，并用数量乘以价格存入总价中，数量加入总数量中，并进行页面渲染</p>
+</blockquote>
+<h1 id="5月15日"><a href="#5月15日" class="headerlink" title="5月15日"></a>5月15日</h1><h2 id="Envet-Lope"><a href="#Envet-Lope" class="headerlink" title="Envet Lope"></a>Envet Lope</h2><ul>
+<li><p>代码执行，进入调用栈，同步代码直接执行，异步代码进入webapi等待调用</p>
+</li>
+<li><p>webapi中分配代码进入宏观任务队列和微观任务队列，webapi中微观任务首先分配，宏观任务后分配</p>
+</li>
+<li><p>执行一次宏观任务就要清空一次微观任务，再进入时就已经执行了一次宏观任务，所以直接执行微观任务</p>
+</li>
+<li><p>重复轮询微观和宏观之间的任务执行</p>
+</li>
+<li><p>注意点：</p>
+</li>
+</ul>
+<blockquote>
+<p>调用栈，webapi，宏观任务队列，微观任务队列</p>
+<p>调用栈中没有任务时检查一次宏观任务队列和微观任务队列</p>
+</blockquote>
+<h2 id="阻止事件冒泡和默认行为"><a href="#阻止事件冒泡和默认行为" class="headerlink" title="阻止事件冒泡和默认行为"></a>阻止事件冒泡和默认行为</h2><p>e.stopPropagetion()</p>
+<p>e.preventDefult()</p>
+<h1 id="5月16日"><a href="#5月16日" class="headerlink" title="5月16日"></a>5月16日</h1><h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><ul>
+<li><h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3></li>
+</ul>
+<p>mongod</p>
+<p>在第二个命令提示符里执行mongo</p>
+<ul>
+<li><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3></li>
+</ul>
+<blockquote>
+<ul>
+<li>show dbs：查看数据库列表</li>
+<li>use db：使用&#x2F;创建数据库</li>
+<li>db：查看当前库名</li>
+<li>db.表名.insert()：新增数据&amp;可能会创建出一个数据表</li>
+<li>show tables &#x2F; show collections：查看当前库中的表列表</li>
+<li>db.表名.drop()：删除指定的表</li>
+<li>db.dropDatabase()：删除当前的库</li>
+</ul>
+</blockquote>
+<h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><blockquote>
+<p>在路由文件中定义的一个函数方法，在其他文件中引入使用，中间件必须要放在待执行事件的前面，不然不会调用</p>
+</blockquote>
+<h2 id="异常中间件"><a href="#异常中间件" class="headerlink" title="异常中间件"></a>异常中间件</h2><blockquote>
+<p>在服务器代码执行的时候发生错误时，在代码底部可以添加一个返回异常的函数提示。</p>
+</blockquote>
+<h1 id="5月17日"><a href="#5月17日" class="headerlink" title="5月17日"></a>5月17日</h1><h2 id="token"><a href="#token" class="headerlink" title="token"></a>token</h2><ul>
+<li><p>下载jsonwebtoken</p>
+<blockquote>
+<p>npm i jsonwebtoken</p>
+</blockquote>
+</li>
+<li><p>引入token</p>
+<blockquote>
+<p>const jwt &#x3D; require(‘jsonwebtoken’)</p>
+<p>const token &#x3D; jwt.sign({username}, ‘dw’, {expiresIn: ‘1h’})</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h2><p>垃圾回收程序运行时,会标记内存中存储的所有变量(标记方法有多种).然后他会将所有在作用域的变量,以及被变量引用的变量的标记去掉.在此之后,被标记的变量就等待被删了.随后垃圾回收机制会运行一次,清理标记的值且收回被占用的内存.</p>
+<ul>
+<li><p>重点</p>
+<blockquote>
+<p>被标记的变量将会被删除，正在运行或者即将运行的变量将会删除标记。</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ul>
+<li>number</li>
+<li>string</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>symbol</li>
+</ul>
+<h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h2><ul>
+<li><p>function</p>
+</li>
+<li><p>array</p>
+</li>
+<li><p>object</p>
+<blockquote>
+<p>typeof()     用来检测数据类型</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="强制转化类型"><a href="#强制转化类型" class="headerlink" title="强制转化类型"></a>强制转化类型</h2><blockquote>
+<p>​	  1、注意点：当空字符串转成数值类型的时候，结果是0</p>
+<p>​      2、注意点：当字符串里面不是纯数字的时候，结果是NaN</p>
+<p>​      3、注意点：把布尔类型的true转成数值类型，结果时1，false其结果时0</p>
+<p>​      4、注意点：把null类型转成数值类型，结果时0。把undefined类型转成数值类型，结果是NaN</p>
+<p>​      5、注意点：把0和NaN转成布尔值，结果是false。把其他的转成布尔类型，是true</p>
+<p>​      6、注意点：把空字符串转成布尔类型，结果时false。如果时字符串里面只有一个空格，表示里面还是有内容，结果时true</p>
+<p>​      7、注意点：把null和undefined转成布尔类型，结果都是false</p>
+</blockquote>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><blockquote>
+<p>全局作用域：函数外部都是全局作用域</p>
+<p>局部作用域：函数内部就是局部作用域</p>
+</blockquote>
+<h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><blockquote>
+<p>在浏览器执行代码的时候会将变量和函数声明提升然后才会逐行执行代码</p>
+</blockquote>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><blockquote>
+<p>一个函数自己调用自己</p>
+</blockquote>
+<h2 id="堆和栈"><a href="#堆和栈" class="headerlink" title="堆和栈"></a>堆和栈</h2><blockquote>
+<p>栈区：主要来存储基本数据类型</p>
+<p>堆区：主要来存储引用数据类型</p>
+</blockquote>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><blockquote>
+<p>shift()  删除数组的第一个元素</p>
+<p>pop()   删除数组的最后一个元素</p>
+<p>unshift()    在数组前面添加一个元素</p>
+<p>push()    在数组后面添加一个元素</p>
+<p>concat()    连接两或多个数组，返回一个新数组</p>
+<p>reverse()    逆序数组，原数组会改变</p>
+<p>tostring()    将数组转成字符串</p>
+<p>join()    将数组转成字符串并以某个符号拼接</p>
+<ul>
+<li><p>slice（）提取，以参数一开始，提取到参数二</p>
+</li>
+<li><p>splice（）删除、添加、替换</p>
+</li>
+<li><p>map、filter和find的区别</p>
+</li>
+</ul>
+<blockquote>
+<p>两个方法都是依照条件遍历数组，并按照条件返回新的数组。map返回满足条件的数组元素的结果，filter将满足条件的数组元素全部返回，find只会返回第一个满足条件的数组元素</p>
+</blockquote>
+</blockquote>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><blockquote>
+<p>toLowerCase()  将字符串的字母全部转为小写</p>
+<p>toUpperCase()  将字符串的字母全部转为大写</p>
+<p>charAt（）  返回指定下标的字符</p>
+<p>indexOf（）返回一个字符在字符串中的索引值</p>
+<p>substring()    返回一段字符串，从参数一取到参数二，为负数时转为0</p>
+<p>substr（）  返回一段字符串，从参数一，取参数二项数，不能为负</p>
+<p>slice（）与数组相同用法</p>
+<p>split()  以某个符号将字符串进行切割，返回一个数组</p>
+</blockquote>
+<h2 id="this对象"><a href="#this对象" class="headerlink" title="this对象"></a>this对象</h2><blockquote>
+<p>this对象指的是函数执行上下文</p>
+<p>this指向规则：</p>
+<ul>
+<li>当在全局调用this时，this指向window对象</li>
+<li>在函数中调用this时，this指向window对象</li>
+<li>在对象的方法中调用this时，this指向这个对象</li>
+<li>在构造函数中调用this时，this指向这个构造函数的实例化对象</li>
+<li>事件调用的函数中使用this，this指向这个事件的调用者</li>
+<li>在箭头函数中使用this，this指向上层代码</li>
+</ul>
+</blockquote>
+<h1 id="5月22日"><a href="#5月22日" class="headerlink" title="5月22日"></a>5月22日</h1><h2 id="三阶段-vue的使用"><a href="#三阶段-vue的使用" class="headerlink" title="三阶段-vue的使用"></a>三阶段-vue的使用</h2><blockquote>
+<p>vue的开发方式为数据驱动方式，数据变化，页面也会发生改变</p>
+</blockquote>
+<h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><blockquote>
+<p>vue是一款用于构建用户界面的渐进式的基于MVVM架构模式的js框架</p>
+<p>它基于标准html和css和js构建，并提供了一套声明式的、组件化的编程模型，帮助开发者高效的开发用户界面，无论是简单还是复杂的界面，vue都可以胜任</p>
+<ul>
+<li>渐进式</li>
+</ul>
+<p>​        &#x3D;&gt; 由简单到复杂</p>
+<p>​          vue核心基础  路由  状态管理  …</p>
+<ul>
+<li>mvvm模式</li>
+</ul>
+<blockquote>
+<ul>
+<li>Model: 数据模型</li>
+</ul>
+<p>​             {id:1001，name:’javascript高级编程’,pric:100}</p>
+<ul>
+<li><p>View:  视图</p>
+</li>
+<li><p>viewModel:  视图模型</p>
+</li>
+</ul>
+<p>​              关联 数据模型和视图界面</p>
+</blockquote>
+</blockquote>
+<h2 id="vue的指令"><a href="#vue的指令" class="headerlink" title="vue的指令"></a>vue的指令</h2><blockquote>
+<p>v-html: 插入html代码，可以解析文本中的标记</p>
+<p>v-text：插入文本信息，不能解析标记</p>
+<p>v-per：将花括号中的文本信息按照原样渲染，不解析</p>
+<p>v-bind：动态的绑定元素的属性 </p>
+<ul>
+<li>可以简写为单冒号形式‘：’</li>
+</ul>
+<p>v-on：响应式的使用一些事件</p>
+<ul>
+<li>可以简写为@形式</li>
+</ul>
+<p>v-if和v-else-if：条件判断指令</p>
+<p>v-show：显示隐藏（true时显示，false时隐藏）</p>
+<p>v-for：列表渲染指令，可以遍历指定的元素，需要添加一个key方便重新排列数组的顺序</p>
+<p>v-model：数据的双向绑定，当数据变化时，存储在data中的数据和页面会随之改变</p>
+<p>v-cloak：用于隐藏没有编译完成的dom元素，在编译完成后显示</p>
+</blockquote>
+<h2 id="vue的修饰符"><a href="#vue的修饰符" class="headerlink" title="vue的修饰符"></a>vue的修饰符</h2><ul>
+<li>修饰符是由点开头的指令后缀</li>
+</ul>
+<blockquote>
+<ul>
+<li>事件修饰符</li>
+</ul>
+<p>.stop：阻止事件冒泡</p>
+<p>.prevent：组织默认事件</p>
+<p>.capture：添加事件监听，内部的元素触发的事件会现在当前元素进行处理，才会交给内部元素处理</p>
+<p>.self：只有当前元素自身触发函数时才会处理事件</p>
+<ul>
+<li>表单修饰符</li>
+</ul>
+<p>number：转数值类型</p>
+<p>trim：去空格</p>
+<p>lazy：只在change时更新</p>
+</blockquote>
+<h1 id="5月23日"><a href="#5月23日" class="headerlink" title="5月23日"></a>5月23日</h1><h2 id="vue的选项属性"><a href="#vue的选项属性" class="headerlink" title="vue的选项属性"></a>vue的选项属性</h2><h3 id="computed计算属性"><a href="#computed计算属性" class="headerlink" title="computed计算属性"></a>computed计算属性</h3><blockquote>
+<p>响应式属性的变化会自动进行计算，本质是一个属性，可以像data中定义的响应式属性一样在模板中使用，具有缓存性质。</p>
+<ul>
+<li>实例</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>: &#123;</span><br><span class="line"> <span class="title function_">hasBook</span>(<span class="params"></span>) &#123;</span><br><span class="line">&gt;<span class="comment">//根据计属性使用的响应式属性的变化[自动]进行计算</span></span><br><span class="line">&gt;<span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">books</span>.<span class="property">length</span> &gt; <span class="number">0</span> ? <span class="string">&#x27;yes&#x27;</span> : <span class="string">&#x27;no&#x27;</span>&#125;&#125;,</span><br><span class="line">&gt;....</span><br><span class="line">&gt;<span class="attr">computed</span>:&#123;</span><br><span class="line"><span class="title function_">reverseMessage</span>(<span class="params"></span>)&#123;</span><br><span class="line">&gt;<span class="comment">// 缓存特点： message没有变化，计算属性值从缓存中读取</span></span><br><span class="line">&gt;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;重新计算&gt;&gt;&gt;&gt;&gt;&#x27;</span>);</span><br><span class="line">&gt;<span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">message</span>.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>) &#125;&#125;,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>案例</li>
+</ul>
+<p>计算总价</p>
+<blockquote>
+<p><strong>关键点</strong></p>
+<p>computed关键字，当中的函数会自动调用，在template中可以直接使用函数名来获取变量。</p>
+</blockquote>
+</blockquote>
+<h3 id="watch侦听器"><a href="#watch侦听器" class="headerlink" title="watch侦听器"></a>watch侦听器</h3><blockquote>
+<p>侦听响应式属性的变化，自动执行方法体代码，有立即侦听（immediate：true）和深度侦听（deep：true）两种</p>
+<ul>
+<li>示例</li>
+</ul>
+<blockquote>
+<p>watch:{</p>
+<p>需要监听的变量：{</p>
+<p>handler（newvalue）{</p>
+<p>需要使用的方法</p>
+<p>}</p>
+<p>}，</p>
+<p>immediate：ture（需要配合hanler使用）</p>
+<p>}</p>
+</blockquote>
+<ul>
+<li>案例</li>
+</ul>
+<p>搜索渲染</p>
+</blockquote>
+<h2 id="vue的组件"><a href="#vue的组件" class="headerlink" title="vue的组件"></a>vue的组件</h2><blockquote>
+<p>vue组件时包含vue特定选项的js对象</p>
+<ul>
+<li>使用vue组件</li>
+</ul>
+<p>在vue实例中声明一个对象，在当中定义组件的作用，在挂载vue对象之前需要进行组件的注册，在其他组件中可以直接使用组件名当作标签名使用，页面会显示组件中的template方法。</p>
+<p><strong>注意点：</strong></p>
+<ul>
+<li>注册组件</li>
+</ul>
+<blockquote>
+<p>&#x2F;&#x2F;局部注册</p>
+<p>components:{</p>
+<p>组件名</p>
+<p>}</p>
+<p>&#x2F;&#x2F;全局注册</p>
+<p>createApp(root).components(组件名)</p>
+</blockquote>
+</blockquote>
+<h2 id="vue组件生命周期"><a href="#vue组件生命周期" class="headerlink" title="vue组件生命周期"></a>vue组件生命周期</h2><blockquote>
+<p>beforeCreate()     在初始化之前</p>
+<p>created()    初始化</p>
+<p>beforeMount()     在挂载之前</p>
+<p>mounted()     挂载</p>
+<p>beforeUpdate()    在更新之前</p>
+<p>update()    更新</p>
+<p>beforeUnmount()    在卸载之前</p>
+<p>unmount()     卸载</p>
+<p>这些方法在组件达到当前状态时可以使用，其中挂载、更新、卸载可以添加事件进行响应</p>
+</blockquote>
+<h2 id="模块化-1"><a href="#模块化-1" class="headerlink" title="模块化"></a>模块化</h2><blockquote>
+<p>在文件钟单独创建一个组件，使用export导出，在需要使用的页面或文件中使用import导入使用<br><strong>注意点：</strong><br>在main文档中需要进行创建vue的实例化对象，并需要挂载到页面中使用，在使用页面中引入使用</p>
+</blockquote>
+<h1 id="5月24日"><a href="#5月24日" class="headerlink" title="5月24日"></a>5月24日</h1><h2 id="组件之间的通讯"><a href="#组件之间的通讯" class="headerlink" title="组件之间的通讯"></a>组件之间的通讯</h2><ul>
+<li><h3 id="父传子"><a href="#父传子" class="headerlink" title="父传子"></a>父传子</h3></li>
+</ul>
+<p>父亲组件的变量通过在父组件中的子组件标记传入，在子组件中使用props选项接收，如果时父组件中的方法，在子组件中使用emits选项接收。（props是只读的）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//props选项示例</span></span><br><span class="line"><span class="attr">components</span>:&#123;</span><br><span class="line">        commB</span><br><span class="line">    &#125;,</span><br><span class="line">....</span><br><span class="line">&lt;com-b :name=<span class="string">&#x27;父亲组件中的变量&#x27;</span>&gt;&lt;com-b&gt;</span><br><span class="line">....</span><br><span class="line">props&#123;</span><br><span class="line"><span class="attr">name</span>:&#123;</span><br><span class="line">        <span class="attr">type</span>:<span class="title class_">String</span>, <span class="comment">//设置传值类型</span></span><br><span class="line">        <span class="attr">required</span>:<span class="literal">true</span>,  <span class="comment">//是否校验</span></span><br><span class="line">        <span class="attr">default</span>:<span class="string">&#x27;rose&#x27;</span>,  <span class="comment">//设置默认值</span></span><br><span class="line">        <span class="title function_">validator</span>(<span class="params">val</span>)&#123;  <span class="comment">//校验函数</span></span><br><span class="line">            <span class="keyword">if</span>(val == <span class="string">&#x27;jack&#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;, </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="子传父"><a href="#子传父" class="headerlink" title="子传父"></a>子传父</h3></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接收事件</span></span><br><span class="line"><span class="title function_">sendMessage</span>(<span class="params"></span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.$emit(<span class="string">&#x27;some-event&#x27;</span>,<span class="variable language_">this</span>.<span class="property">msg</span>) <span class="comment">// 触自定义事件some-event,</span></span><br><span class="line">        &#125;</span><br><span class="line">&lt;button @click=<span class="string">&quot;sendMessage&quot;</span>&gt;确定&lt;/button&gt;</span><br><span class="line">....</span><br><span class="line"><span class="attr">emits</span>:[<span class="string">&#x27;some-event&#x27;</span>], </span><br></pre></td></tr></table></figure>
+
+<p>在父组件中的methods选项中定义bind开头的方法，在子组件标签中传入，子组件使用emits选项接受，并用this.$emit(“传值名”，参数)来使用。</p>
+<ul>
+<li><h3 id="兄弟传递"><a href="#兄弟传递" class="headerlink" title="兄弟传递"></a>兄弟传递</h3></li>
+</ul>
+<p>使用mitt第三库，$emit（自定义事件，参数）</p>
+<p>$bus &#x3D; new mitt()</p>
+<p>A    this.$bus.on(‘事件’，(mesage)&#x3D;&gt;{})</p>
+<p>B    this.$bus.emit(‘事件’，参数)</p>
+<ul>
+<li><h3 id="组件之间的双向绑定"><a href="#组件之间的双向绑定" class="headerlink" title="组件之间的双向绑定"></a>组件之间的双向绑定</h3></li>
+</ul>
+<p>方法一：</p>
+<blockquote>
+<p>父亲组件传递需要绑定的参数，子组件接受并绑定到input上，并监听数值变化，并使用父亲组件的方法更改。</p>
+</blockquote>
+<p>方法二：</p>
+<blockquote>
+<p>父亲组件传递需要绑定的参数，子组件接受并绑定到input上，使用计算属性监听数值变化，数值变化自动调用父亲组件中的方法</p>
+</blockquote>
+<p>方法三：</p>
+<blockquote>
+<p>使用v-model实现双向绑定</p>
+<p>&lt;model-input **v-model&#x3D;”modelMessage”**&gt;</model-input></p>
+<p>….  </p>
+<p><strong>props: [“modelValue”],</strong></p>
+<p><strong>emits: [“update:modelValue”],</strong></p>
+<p>….</p>
+<p>&lt;input type&#x3D;”text”  **:value&#x3D;”modelValue”  *@input&#x3D;”$emit(‘update:modelValue’,$event.target.value)***”  placeholder&#x3D;”请输入”&gt;</p>
+</blockquote>
+<ul>
+<li><h4 id="透传"><a href="#透传" class="headerlink" title="透传"></a>透传</h4></li>
+</ul>
+<p>父组件向子组件传递属性或事件，没有被props和emits声明，一般传递的是class和id属性。</p>
+<blockquote>
+<p>组织透传根节点</p>
+<p>inheritAttrs: false、v-bind&#x3D;”$attrs”</p>
+</blockquote>
+<h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><p>默认插槽：v-slot:default</p>
+<p>具名插槽：v-slot:name</p>
+<p>作用域插槽：v-slot:name&#x3D;’任意名称’    &#x2F;&#x2F;可以调用子组件上的任意方法。</p>
+<h2 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h2><p>在普通元素当作属性使用：ref&#x3D;‘名称’，用this.$refs.btn可以获取到该元素的domu元素。加在组件上，则用this.$refs.list获取</p>
+<h1 id="5月25日"><a href="#5月25日" class="headerlink" title="5月25日"></a>5月25日</h1><h2 id="依赖注入跨组件通讯"><a href="#依赖注入跨组件通讯" class="headerlink" title="依赖注入跨组件通讯"></a>依赖注入跨组件通讯</h2><h3 id="provide与inject"><a href="#provide与inject" class="headerlink" title="provide与inject"></a>provide与inject</h3><p>解决了父亲组件向深层组件传递参数的问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">provide（）&#123; <span class="comment">//传递</span></span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        接收名称：传递的参数名称</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">....</span><br><span class="line"><span class="attr">inject</span>:[<span class="string">&#x27;接收名称&#x27;</span>] <span class="comment">//接收</span></span><br><span class="line">....</span><br><span class="line"><span class="comment">//可以配合响应式数据</span></span><br><span class="line"><span class="title function_">provide</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		接收名称：<span class="title function_">computed</span>(<span class="function">()=&gt;</span>传递的参数名称)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h2><p>在父组件中使用component标记使用组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&#x27;commIndex&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>commIndex用来存储当前使用的组件名，在通过改变commIndex的方式切换组件使用</p>
+<h2 id="缓存组件"><a href="#缓存组件" class="headerlink" title="缓存组件"></a>缓存组件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br><span class="line">包裹缓存的组件，在组件切换后将不会卸载，而是缓存起来，</span><br><span class="line"></span><br><span class="line">也可以指定某个组件被缓存</span><br><span class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">include</span>=<span class="string">&#x27;组件name值&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br><span class="line"></span><br><span class="line">在被缓存的组件需要重新执行函数时，可以在activated(激活)和deactivated(失活)生命状态函数中添加需要执行的方法</span><br></pre></td></tr></table></figure>
+
+<h2 id="异步组件"><a href="#异步组件" class="headerlink" title="异步组件"></a>异步组件</h2><p>在大型项目中，将应用拆分为更小块，在需要时才从服务器加载相关的组件，defineAsyncComponent方法来实现。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;defineAsyncComponent&#125; <span class="keyword">from</span> <span class="string">&#x27;Vue&#x27;</span> <span class="comment">//引入api</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">AsyncComp</span> = <span class="title function_">defineAsyncComponent</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">        ...</span><br><span class="line">        <span class="title function_">resolve</span>()</span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//在本地像一般组件一样使用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Suspense组件"><a href="#Suspense组件" class="headerlink" title="Suspense组件"></a>Suspense组件</h2><p>在请求服务器异步加载组件时，在等待时渲染一个加载状态</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Suspense</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">AsyncCom</span>&gt;</span><span class="tag">&lt;/<span class="name">Asyncom</span>&gt;</span> //异步组件</span><br><span class="line"><span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Teleport传送门"><a href="#Teleport传送门" class="headerlink" title="Teleport传送门"></a>Teleport传送门</h2><p>在组件堆叠不会处理样式时，可以将组件以传送门的方式插入都某个标记中。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;需要插入到的标记名称&quot;</span>&gt;</span></span><br><span class="line">    需要传送的组件</span><br><span class="line"><span class="tag">&lt;/<span class="name">teleport</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Transition过渡动画"><a href="#Transition过渡动画" class="headerlink" title="Transition过渡动画"></a>Transition过渡动画</h2><p>可以用来处理有转变效果的事件，根据特定的css标记来控制动画的效果。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">&#x27;find&#x27;</span>&gt;</span></span><br><span class="line">    需要控制的组件</span><br><span class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.<span class="property">find</span>-enter-<span class="keyword">from</span>, <span class="comment">///进入动画的起始状态。</span></span><br><span class="line">.<span class="property">find</span>-enter-active, <span class="comment">///进入动画的生效状态。</span></span><br><span class="line">.<span class="property">find</span>-enter-to, <span class="comment">///进入动画的结束状态。</span></span><br><span class="line">.<span class="property">find</span>-leave-<span class="keyword">from</span>, <span class="comment">///离开动画的起始状态。</span></span><br><span class="line">.<span class="property">find</span>-leave-active,</span><br><span class="line">.<span class="property">find</span>-leave-to,</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><p>在需要使用其他内置指令没有的效果时，可以利用directive方法注册一个自定义指令。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">directive</span>(<span class="string">&#x27;自定义的名称&#x27;</span>，&#123;</span><br><span class="line">	mounted或者<span class="title function_">updated</span>(<span class="params">el,binding</span>)&#123;</span><br><span class="line">		<span class="comment">//定义元素的属性或方法</span></span><br><span class="line">    		<span class="comment">//el：当前元素</span></span><br><span class="line">    		<span class="comment">//binding：传递的变量（binding.value传递的值）</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="5月26日"><a href="#5月26日" class="headerlink" title="5月26日"></a>5月26日</h1><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>为vue应用添加全局功能工具的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用app.use安装</span></span><br><span class="line">app.<span class="title function_">use</span>(插件名称，&#123;&#125;)</span><br><span class="line"><span class="comment">//使用定义直接安装，配合install使用</span></span><br><span class="line"><span class="keyword">const</span> 插件名称=&#123;</span><br><span class="line">	<span class="title function_">install</span>(<span class="params">app,options</span>)&#123;</span><br><span class="line">		<span class="comment">//配置选项</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="混用"><a href="#混用" class="headerlink" title="混用"></a>混用</h2><p>将一个包含组件选项的数组，添加到当前的组件实例中</p>
+<p>可以定义一个通用的组件实例，通过混用使用当中的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> 通用组件名称 <span class="keyword">from</span> ‘地址’</span><br><span class="line"><span class="attr">mixins</span>:[通用组件名称]</span><br><span class="line"><span class="comment">//在引入的组件中有变量、方法与当前组件重名的，当前组件首先初始化定义使用，如果有生命周期函数使用重复，引入组件首先调用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h2><p>会将el.$nextTick(cb)中的回调函数cb推迟到下一个DOM更新周期之后执行</p>
+<p>即为等待DOM更新执行完毕，nextTick才会执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.$nextTick(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">	<span class="comment">//执行函数体</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><blockquote>
+</blockquote>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/05/26/%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/05/26/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%A1%B5%E9%9D%A2/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            第二个页面
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/05/16/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hello World</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2023
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="wy的博客网站"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
